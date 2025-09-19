@@ -1,0 +1,19 @@
+/* Fade-in/out animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover animation on portfolio images */
+.portfolio-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.portfolio-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
