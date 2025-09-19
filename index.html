@@ -1,283 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a;
-            color: #d4d4d4;
-        }
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-        .text-shadow-light {
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-        }
-        .container {
-            max-width: 1400px;
-        }
-        .carousel-container {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-        .carousel-track {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-slide {
-            flex-shrink: 0;
-            width: 100%;
-        }
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-        }
-        .modal-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 101;
-        }
-        .modal-image {
-            max-width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
-        }
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-</head>
-<body class="antialiased">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fable Co.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Modal for Image View -->
-    <div id="imageModal" class="modal">
-        <span class="modal-close">&times;</span>
-        <div class="modal-content">
-            <img id="modalImage" class="modal-image" src="" alt="">
-            <p id="modalDescription" class="text-white mt-4 text-center max-w-xl"></p>
-        </div>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#f5f0e6] text-[#444] font-['Quicksand',sans-serif]">
+
+  <!-- Hero -->
+  <header class="relative h-screen flex flex-col items-center justify-center text-center">
+    <h1 class="text-5xl md:text-6xl font-bold fade-section">THE FABLE CO.</h1>
+    <p class="mt-6 max-w-2xl text-lg fade-section">
+      Stories through frames — Photography & Cinematography
+    </p>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 fade-section text-center">
+    <h2 class="text-4xl font-bold mb-6">The Art of the Frame</h2>
+    <p class="max-w-3xl mx-auto text-lg text-gray-600">
+      I capture the emotion of a moment, the soul of a subject, and the details
+      that tell stories through visuals.
+    </p>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 fade-section">Portfolio</h2>
+
+    <!-- Spaces -->
+    <div class="fade-section mb-20">
+      <h3 class="text-2xl font-semibold text-center mb-6">Spaces & Design</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://placehold.co/400x300/eee/555?text=Resort" class="portfolio-img rounded-lg shadow-md">
+        <img src="https://placehold.co/400x300/ddd/555?text=Office" class="portfolio-img rounded-lg shadow-md">
+        <img src="https://placehold.co/400x300/ccc/555?text=Detail" class="portfolio-img rounded-lg shadow-md">
+      </div>
     </div>
 
-    <!-- Hero Section -->
-    <header id="home" class="relative w-full h-screen flex flex-col items-center justify-center text-center text-white parallax" style="background-image: url('https://placehold.co/1920x1080/282828/f0f0f0?text=Capturing+Your+Vision');">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
-        <div class="relative z-10 p-8 rounded-lg">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-4 text-shadow-light">
-                THE FABLE CO.
-            </h1>
-            <p class="text-lg md:text-xl max-w-3xl text-shadow-light">
-                Specializing in crafting compelling visual narratives through professional photography and cinematography for a diverse range of clients.
-            </p>
-        </div>
-    </header>
+    <!-- Products -->
+    <div class="fade-section mb-20">
+      <h3 class="text-2xl font-semibold text-center mb-6">Brands & Products</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://placehold.co/400x300/f5d5c5/555?text=Food" class="portfolio-img rounded-lg shadow-md">
+        <img src="https://placehold.co/400x300/e8cbb2/555?text=Product" class="portfolio-img rounded-lg shadow-md">
+        <img src="https://placehold.co/400x300/dec5a3/555?text=Display" class="portfolio-img rounded-lg shadow-md">
+      </div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-sm shadow-lg">
-        <div class="container mx-auto px-6 py-4 flex justify-center items-center">
-            <a href="#about" class="mx-3 md:mx-6 text-sm md:text-base font-medium text-gray-300 hover:text-white transition-colors">About</a>
-            <a href="#portfolio" class="mx-3 md:mx-6 text-sm md:text-base font-medium text-gray-300 hover:text-white transition-colors">Portfolio</a>
-            <a href="#contact" class="mx-3 md:mx-6 text-sm md:text-base font-medium text-gray-300 hover:text-white transition-colors">Contact</a>
-        </div>
-    </nav>
+    <!-- People -->
+    <div class="fade-section mb-20">
+      <h3 class="text-2xl font-semibold text-center mb-6">People & Moments</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://placehold.co/400x300/fce9d8/555?text=Portrait" class="portfolio-img rounded-lg shadow-md">
+        <img src="https://placehold.co/400x300/f7dbc6/555?text=Lifestyle" class="portfolio-img rounded-lg shadow-md">
+        <img src="https://placehold.co/400x300/efd5bb/555?text=Event" class="portfolio-img rounded-lg shadow-md">
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <!-- About Section -->
-        <section id="about" class="container mx-auto px-6 py-20 md:py-32">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">The Art of the Frame</h2>
-                <p class="text-gray-400 leading-relaxed text-lg mb-8">
-                    My work is driven by a deep appreciation for the power of visual communication. I focus on capturing the soul of a subject, the emotion of a moment, and the intricate details that tell a compelling story. My goal is to produce visual assets that resonate with your audience and elevate your brand.
-                </p>
-                <div class="flex justify-center space-x-6 text-3xl text-gray-500">
-                    <i class="fa-solid fa-camera"></i>
-                    <i class="fa-solid fa-video"></i>
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-            </div>
-        </section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 text-center fade-section">
+    <h2 class="text-4xl font-bold mb-6">Let's Work Together</h2>
+    <p class="text-lg text-gray-600 mb-8">
+      Reach out to discuss how we can create visuals that tell your unique story.
+    </p>
+    <a href="mailto:your.email@example.com"
+       class="inline-block bg-[#d6bfae] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c7ad9a] transition">
+      Get in Touch
+    </a>
+  </section>
 
-        <!-- Portfolio Sections -->
-        <section id="portfolio" class="w-full">
-            <!-- Section 1: Spaces & Design -->
-            <div class="relative w-full min-h-screen flex items-center justify-center p-8 md:p-16 parallax" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/454545?text=Space+Design');">
-                <div class="absolute inset-0 bg-black opacity-70"></div>
-                <div class="relative z-10 text-center text-white w-full">
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-shadow-light">Spaces & Design</h3>
-                    <p class="max-w-3xl mx-auto text-lg mb-8">
-                        Capturing the unique character of interiors, from architectural details to the atmosphere of a well-designed space.
-                    </p>
-                    <div id="carousel-spaces" class="carousel-container max-w-6xl mx-auto rounded-lg shadow-2xl">
-                        <div class="carousel-track"></div>
-                        <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-20 text-white p-4 rounded-full hover:bg-opacity-40 transition" onclick="prevSlide('spaces')"><i class="fas fa-chevron-left"></i></button>
-                        <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-20 text-white p-4 rounded-full hover:bg-opacity-40 transition" onclick="nextSlide('spaces')"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
+  <footer class="py-6 text-center text-sm text-gray-500">
+    © 2025 THE FABLE CO. All rights reserved.
+  </footer>
 
-            <!-- Section 2: Brands & Products -->
-            <div class="relative w-full min-h-screen flex items-center justify-center p-8 md:p-16 parallax" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/454545?text=Brands+Products');">
-                <div class="absolute inset-0 bg-black opacity-70"></div>
-                <div class="relative z-10 text-center text-white w-full">
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-shadow-light">Brands & Products</h3>
-                    <p class="max-w-3xl mx-auto text-lg mb-8">
-                        Creating compelling imagery that highlights the quality, design, and unique story of a brand's products.
-                    </p>
-                    <div id="carousel-products" class="carousel-container max-w-6xl mx-auto rounded-lg shadow-2xl">
-                        <div class="carousel-track"></div>
-                        <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-20 text-white p-4 rounded-full hover:bg-opacity-40 transition" onclick="prevSlide('products')"><i class="fas fa-chevron-left"></i></button>
-                        <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-20 text-white p-4 rounded-full hover:bg-opacity-40 transition" onclick="nextSlide('products')"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 3: People & Moments -->
-            <div class="relative w-full min-h-screen flex items-center justify-center p-8 md:p-16 parallax" style="background-image: url('https://placehold.co/1920x1080/1a1a1a/454545?text=People+Moments');">
-                <div class="absolute inset-0 bg-black opacity-70"></div>
-                <div class="relative z-10 text-center text-white w-full">
-                    <h3 class="text-4xl md:text-5xl font-bold mb-4 text-shadow-light">People & Moments</h3>
-                    <p class="max-w-3xl mx-auto text-lg mb-8">
-                        Telling human stories through authentic portraiture and capturing the energy of events.
-                    </p>
-                    <div id="carousel-people" class="carousel-container max-w-6xl mx-auto rounded-lg shadow-2xl">
-                        <div class="carousel-track"></div>
-                        <button class="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-20 text-white p-4 rounded-full hover:bg-opacity-40 transition" onclick="prevSlide('people')"><i class="fas fa-chevron-left"></i></button>
-                        <button class="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-20 text-white p-4 rounded-full hover:bg-opacity-40 transition" onclick="nextSlide('people')"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="bg-[#282828] py-20 md:py-32">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Bring Your Vision to Life</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto mb-8 text-lg">
-                    I am ready to collaborate on your next project. Reach out to discuss how we can create compelling visual content that tells your unique story.
-                </p>
-                <div class="space-y-4">
-                    <a href="mailto:your.email@example.com" class="inline-block bg-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-colors">
-                        Get in Touch
-                    </a>
-                    <div class="text-gray-500 mt-4 text-sm">
-                        <p>Email: raghavmendiratta4@gmail.com</p>
-                        <p>Phone: +91 8875534355</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-6 text-center text-gray-600 text-sm">
-        <p>&copy; 2025 THE FABLE CO. All rights reserved.</p>
-    </footer>
-
-    <script>
-        const portfolioData = {
-            spaces: [
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Luxury+Resort+Interior', description: 'The serene elegance and intricate lighting of a five-star hotel suite.' },
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Modern+Office+Space', description: 'Capturing the clean lines and collaborative atmosphere of a modern office.' },
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Architectural+Detail', description: 'A focus on the details that define a space, from textures to light.' },
-            ],
-            products: [
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Plated+Cuisine', description: 'Artistic food photography highlighting presentation and texture.' },
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Product+Shot', description: 'A sleek product shot capturing the essence of a brand.' },
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Retail+Display', description: 'The vibrant and engaging display of products in a retail environment.' },
-            ],
-            people: [
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Portrait', description: 'An expressive portrait that captures the subject\'s personality.' },
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Lifestyle+Shot', description: 'Candid photo of people interacting in their natural environment.' },
-                { src: 'https://placehold.co/1200x800/d4d4d4/1a1a1a?text=Corporate+Event', description: 'Dynamic event photography highlighting key moments and emotions.' },
-            ]
-        };
-
-        const carousels = {};
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        const modalDescription = document.getElementById('modalDescription');
-        const modalClose = document.querySelector('.modal-close');
-
-        modalClose.onclick = () => {
-            modal.style.display = 'none';
-        };
-
-        Object.keys(portfolioData).forEach(category => {
-            const track = document.querySelector(`#carousel-${category} .carousel-track`);
-            const slides = portfolioData[category].map(item => {
-                const slide = document.createElement('div');
-                slide.className = 'carousel-slide cursor-pointer';
-                const img = document.createElement('img');
-                img.src = item.src;
-                img.alt = item.description;
-                img.className = 'w-full h-auto object-cover rounded-lg shadow-lg';
-                img.onclick = () => {
-                    modalImage.src = item.src;
-                    modalDescription.textContent = item.description;
-                    modal.style.display = 'flex';
-                };
-                slide.appendChild(img);
-                return slide;
-            });
-            slides.forEach(slide => track.appendChild(slide));
-            carousels[category] = { track, index: 0, slides: portfolioData[category].length };
-        });
-
-        const updateCarousel = (category) => {
-            const carousel = carousels[category];
-            const slideWidth = carousel.track.children[0].getBoundingClientRect().width;
-            carousel.track.style.transform = `translateX(-${carousel.index * slideWidth}px)`;
-        };
-
-        window.prevSlide = (category) => {
-            const carousel = carousels[category];
-            carousel.index = (carousel.index - 1 + carousel.slides) % carousel.slides;
-            updateCarousel(category);
-        };
-
-        window.nextSlide = (category) => {
-            const carousel = carousels[category];
-            carousel.index = (carousel.index + 1) % carousel.slides;
-            updateCarousel(category);
-        };
-
-        window.onresize = () => {
-            Object.keys(carousels).forEach(updateCarousel);
-        };
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
