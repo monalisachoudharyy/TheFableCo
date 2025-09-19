@@ -17,3 +17,20 @@
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+.email-link {
+  color: #e63946; /* red */
+}
+
+.insta-link {
+  color: #833AB4; /* Instagram purple */
+}
+
+.phone-link {
+  color: #2a9d8f; /* teal green */
+}
+
+.email-link:hover,
+.insta-link:hover,
+.phone-link:hover {
+  opacity: 0.7; /* nice hover fade */
+}
